@@ -9,7 +9,9 @@ de places limitée et un seul type de projecteur
 - **Séance** : Le moment où le film est projeté, elle a une horaire et une durée, 
 et est assignée à une salle.
 
-- Projecteur
+- **Projecteur** : C'est l'équipement qui permet de projeter les films, il est soit :
+  - numérique : lis les fichiers numériques.
+  - argentique : lis les pellicules 35mm.
 
 - Film
 - Support
