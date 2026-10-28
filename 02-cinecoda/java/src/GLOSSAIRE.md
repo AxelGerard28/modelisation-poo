@@ -31,3 +31,26 @@ et est assignée à une salle.
   - Plein tarif.
   - Tarif étudiant.
   - Tarif enfant.
+
+
+## Les comportements : 
+
+
+- Programmer une séance : 
+- Vendre un billet :
+- Démarrer la séance :
+- Finir la séance :
+- Nettoyage :
+- Places restantes :
+- Taux de remplissage :
+- Recette :
+- État de la salle :
+- Salles libres :
+- Séances du jour :
+- Recette du jour :
+- Nombre de projections :
+
+## Les états :
+
+
+## Les règles :
