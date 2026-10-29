@@ -18,15 +18,27 @@ public class Main {
             String typeProjecteur = salle.getProjecteur().estNumerique() ? "numérique" : "argentique";
             log.info("Salle " + salle.getNumero() + " : " + salle.getCapacite() + " places, projecteur " + typeProjecteur);
         }
-
-
         String textSallesLibres = "Salles libres : ";
         for (Salle salle : cinema.getSalles()) {
             textSallesLibres += "Salle " + salle.getNumero() + ", ";
         }
-
         log.info(textSallesLibres);
 
+
+        log.info("=== 2. Films et supports ===");
+
+        Film dune = new Film("Dune 3", 166);
+        Support supportDune = new FichierNumerique(dune, "30/10/2026");
+
+        Film avengers = new Film("Avengers: Doomsday", 119);
+        Support supportAvengers = new FichierNumerique(avengers, "14/10/2026");
+
+        Film rocky = new Film("I Play Rocky", 103);
+        Support supportRocky = new Copie35mm(rocky, 49);
+
+        log.info(supportDune.getFilm().getTitre() + " (" + supportDune.getFilm().getDureeEnMinutes() + " min) : " + supportDune.getDescription());
+        log.info(supportAvengers.getFilm().getTitre() + " (" + supportAvengers.getFilm().getDureeEnMinutes() + " min) : " + supportAvengers.getDescription());
+        log.info(supportRocky.getFilm().getTitre() + " (" + supportRocky.getFilm().getDureeEnMinutes() + " min) : " +supportRocky.getDescription());
 
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
