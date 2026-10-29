@@ -54,3 +54,24 @@ et est assignée à une salle.
 
 
 ## Les règles :
+
+- **Cycle des salles** : 
+  - Une séance ne peut démarrer que lorsque la salle est libre. 
+  - Durant la séance, la salle est en séance.
+  - A la fin de la séance, la salle doit etre nétoyée. 
+  - Apres nettoyage, elle redevient libre.
+
+
+- **Compatibilité projecteur** :
+  - Un projecteur numérique ne peut projeter qu'un film en fichier numérique.
+  - Un projecteur argentique ne peut projeter qu'un film en copie 35 mm.
+
+
+- **Validité de la clé numérique** : Un fichier numérique a une date de validité, si celle-ci 
+est dépassée, le film ne peut pas être projeté.
+
+
+- **Limite d'usure argentique** : Une copie 35mm a une limite de projection, au-delà de 50, elle devient inutilisable.
+
+
+- **Limite vente de billet** : One ne peut pas vendre plus de billet qu'il n'y a de place dans la salle.
