@@ -6,6 +6,6 @@ public class Cinema {
     }
 
     public void ajouterSalle(int numero, int capacite) {
-        Salle salle = new salle(numero, capacite);
+        Salle salle = new Salle(numero, capacite);
     }
 }
