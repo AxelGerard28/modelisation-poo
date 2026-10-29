@@ -8,7 +8,8 @@ public class Main {
     public static void main(String[] args) {
         log = ConsoleLogger.create("cine.scenario");
         Cinema cinema = new Cinema("CineCoda");
-        cinema.ajouterSalle(1,100);
+        cinema.ajouterSalle(1,100, new ProjecteurNumerique("PN-1"));
+        cinema.ajouterSalle(2, 3, new ProjecteurArgentique("PA-1"));
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
