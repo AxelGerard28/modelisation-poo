@@ -19,6 +19,16 @@ public class Main {
             log.info("Salle " + salle.getNumero() + " : " + salle.getCapacite() + " places, projecteur " + typeProjecteur);
         }
 
+
+        String textSallesLibres = "Salles libres : ";
+        for (Salle salle : cinema.getSalles()) {
+            textSallesLibres += "Salle " + salle.getNumero() + ", ";
+        }
+
+        log.info(textSallesLibres);
+
+
+
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
 }
