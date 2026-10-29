@@ -99,3 +99,10 @@ est dépassée, le film ne peut pas être projeté.
 
 
 - **Limite vente de billet** : One ne peut pas vendre plus de billet qu'il n'y a de place dans la salle.
+
+## Mermaid :
+
+1 :
+![premier mermaid](img.png)
+
+// peut etre refaire plus tard car peut etre un peu trop simplifié
