@@ -9,8 +9,12 @@ public class Cinema {
     public Cinema(String cineCoda) {
     }
 
-    public void ajouterSalle(int numero, int capacite) {
-        Salle salle = new Salle(numero, capacite);
+    public void ajouterSalle(int numero, int capacite, Projecteur projecteur) {
+        Salle salle = new Salle(numero, capacite, projecteur);
         this.salles.add(salle);
+    }
+
+    public List<Salle> getSalles() {
+        return salles;
     }
 }
