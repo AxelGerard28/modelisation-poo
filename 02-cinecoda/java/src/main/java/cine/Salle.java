@@ -21,6 +21,11 @@ public class Salle {
         this.etat = etat;
     }
 
+    public String nettoyer() {
+        this.etat = EtatSalle.LIBRE;
+        return "Nettoyage de la Salle " + numero + " terminé";
+    }
+
 
     public int getNumero() {
         return numero;

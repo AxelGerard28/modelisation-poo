@@ -107,6 +107,10 @@ public class Main {
         log.info("");
         log.info("=== 7. I Play Rocky en Salle 2 le 15/10/2026 (tarif de base 8,00 €) ===");
         log.info(seanceRocky2.demarrer());
+        log.info(salle2.nettoyer());
+        log.info(seanceRocky2.demarrer());
+
+
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
 }

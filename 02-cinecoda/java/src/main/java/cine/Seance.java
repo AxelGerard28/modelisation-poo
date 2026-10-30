@@ -41,6 +41,10 @@ public class Seance {
     }
 
     public String demarrer() {
+        if (salle.getEtat() != EtatSalle.LIBRE) {
+            return "Démarrage refusé : la Salle " + salle.getNumero() + " n'est pas libre (état : " + salle.getEtat() + ")";
+        }
+
         String erreur = support.verifier(salle.getProjecteur(), date);
         if(erreur != null) {
             return "Démarrage refusé : " + erreur;
