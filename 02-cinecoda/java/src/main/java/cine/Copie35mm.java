@@ -15,7 +15,10 @@ public class Copie35mm extends Support {
 
     @Override
     public String verifier(Projecteur projecteur, String dateSeance) {
-        return "";
+        if(!projecteur.estArgentique()) {
+            return "une copie 35 mm ne peut pas être lue par un projecteur numérique";
+        }
+        return null;
     }
     public int getNombreProjections() {
         return nombreProjections;

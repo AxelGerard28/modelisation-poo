@@ -11,6 +11,13 @@ public class Salle {
         this.projecteur = projecteur;
     }
 
+    private EtatSalle etat = EtatSalle.LIBRE;
+
+    public EtatSalle getEtat() {
+        return etat;
+    }
+
+
     public int getNumero() {
         return numero;
     }

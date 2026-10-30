@@ -65,6 +65,15 @@ public class Main {
         log.info(seanceAvengers.demarrer());
 
 
+        log.info("");
+        log.info("=== 5. I Play Rocky en Salle 1 le 15/10/2026 (tarif de base 10,00 €) ===");
+
+        Seance seanceRocky = new Seance(supportRocky, salle1, "15/10/2026", 10.00);
+
+        log.info(seanceRocky.demarrer());
+
+        log.info("Etat de la salle : " + salle1.getEtat());
+
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
 }
