@@ -92,7 +92,21 @@ public class Main {
         log.info(seanceRocky2.terminer());
         log.info("État de la salle " + salle2.getNumero() + " : " + salle2.getEtat());
 
+        String texteSallesLibres2 = "Salles libres : ";
 
+        for (Salle s : cinema.getSalles()) {
+            if (s.getEtat() == EtatSalle.LIBRE) {
+                texteSallesLibres2 += "Salle " + s.getNumero() + ", ";
+            }
+        }
+
+        log.info(texteSallesLibres2);
+        log.info("Projections de la copie de « " + supportRocky.getFilm().getTitre() + " » : " + ((Copie35mm) supportRocky).getNombreProjections());
+
+
+        log.info("");
+        log.info("=== 7. I Play Rocky en Salle 2 le 15/10/2026 (tarif de base 8,00 €) ===");
+        log.info(seanceRocky2.demarrer());
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
 }

@@ -26,6 +26,10 @@ public class FichierNumerique extends Support {
         return null;
     }
 
+    @Override
+    public void utiliser() {
+    }
+
     public String getDateExpiration() {
         return dateExpiration;
     }

@@ -18,6 +18,9 @@ public class Seance {
     }
 
     public String vendreBillet(Billet billet) {
+        if (placesVendues >= salle.getCapacite()) {
+            return "Vente refusée : la séance est complète (" + salle.getCapacite() + " places)";
+        }
         double prix = billet.getPrix(tarifBase);
         this.recette += prix;
         this.placesVendues++;
@@ -42,10 +45,13 @@ public class Seance {
         if(erreur != null) {
             return "Démarrage refusé : " + erreur;
         }
+        salle.setEtat(EtatSalle.EN_SEANCE);
+        support.utiliser();
         return "Séance démarrée";
     }
 
     public String terminer() {
-        return"";
+        salle.setEtat(EtatSalle.NETTOYAGE);
+        return "Séance terminée";
     }
 }

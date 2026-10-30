@@ -1,11 +1,14 @@
 package cine;
 
 public class Copie35mm extends Support {
-    private final int nombreProjections;
+    private int nombreProjections;
 
     public Copie35mm(Film film, int nombreProjections) {
         super(film);
         this.nombreProjections = nombreProjections;
+    }
+    public int getNombreProjections() {
+        return nombreProjections;
     }
 
     @Override
@@ -20,7 +23,9 @@ public class Copie35mm extends Support {
         }
         return null;
     }
-    public int getNombreProjections() {
-        return nombreProjections;
+
+    @Override
+    public void utiliser() {
+        this.nombreProjections++;
     }
 }

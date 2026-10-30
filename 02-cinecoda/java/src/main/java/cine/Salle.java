@@ -17,6 +17,10 @@ public class Salle {
         return etat;
     }
 
+    public void setEtat(EtatSalle etat) {
+        this.etat = etat;
+    }
+
 
     public int getNumero() {
         return numero;
