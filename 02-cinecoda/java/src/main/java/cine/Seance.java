@@ -36,4 +36,12 @@ public class Seance {
     public String getRecetteFormatee() {
         return String.format(Locale.FRANCE, "%.2f €", recette);
     }
+
+    public String demarrer() {
+        String erreur = support.verifier(salle.getProjecteur(), date);
+        if(erreur != null) {
+            return "Démarrage refusé : " + erreur;
+        }
+        return "Séance démarrée";
+    }
 }

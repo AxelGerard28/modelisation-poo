@@ -12,4 +12,5 @@ public abstract class Support {
     }
 
     public abstract String getDescription();
+    public abstract String verifier(Projecteur projecteur, String dateSeance);
 }

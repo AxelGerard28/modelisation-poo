@@ -57,6 +57,12 @@ public class Main {
         log.info("Taux de remplissage : " + seanceDune.getTauxRemplissage() + " %");
         log.info("Recette : " + seanceDune.getRecetteFormatee());
 
+        log.info("");
+        log.info("=== 4. Avengers: Doomsday en Salle 1 le 15/10/2026 (tarif de base 10,00 €) ===");
+
+
+        Seance seanceAvengers = new Seance(supportAvengers, salle1, "15/10/2026", 10.00);
+        log.info(seanceAvengers.demarrer());
 
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
