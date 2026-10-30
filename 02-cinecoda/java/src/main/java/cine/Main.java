@@ -72,7 +72,7 @@ public class Main {
 
         log.info(seanceRocky.demarrer());
 
-        log.info("Etat de la salle : " + salle1.getEtat());
+        log.info("État de la salle " + salle1.getNumero() + " : " + salle1.getEtat());
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
