@@ -21,6 +21,10 @@ public class Copie35mm extends Support {
         if(!projecteur.estArgentique()) {
             return "une copie 35 mm ne peut pas être lue par un projecteur numérique";
         }
+
+        if (this.nombreProjections >= 50) {
+            return "la copie 35 mm de « " + getFilm().getTitre() + " » est usée (50 projections)";
+        }
         return null;
     }
 
