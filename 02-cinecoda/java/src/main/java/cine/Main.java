@@ -68,11 +68,30 @@ public class Main {
         log.info("");
         log.info("=== 5. I Play Rocky en Salle 1 le 15/10/2026 (tarif de base 10,00 €) ===");
 
-        Seance seanceRocky = new Seance(supportRocky, salle1, "15/10/2026", 10.00);
+        Seance seanceRocky1 = new Seance(supportRocky, salle1, "15/10/2026", 10.00);
 
-        log.info(seanceRocky.demarrer());
+        log.info(seanceRocky1.demarrer());
 
         log.info("État de la salle " + salle1.getNumero() + " : " + salle1.getEtat());
+
+        log.info("");
+        log.info("=== 6. I Play Rocky en Salle 2 le 15/10/2026 (tarif de base 8,00 €) ===");
+
+        Salle salle2 = cinema.getSalles().get(1);
+        Seance seanceRocky2 = new Seance(supportRocky, salle2, "15/10/2026", 8.00);
+
+        log.info(seanceRocky2.vendreBillet(new BilletEtudiant()));
+        log.info(seanceRocky2.vendreBillet(new BilletEtudiant()));
+        log.info(seanceRocky2.vendreBillet(new BilletEtudiant()));
+        log.info(seanceRocky2.vendreBillet(new BilletEtudiant()));
+
+        log.info("Places restantes : " + seanceRocky2.getPlaceRestantes());
+        log.info("Taux de remplissage : " + seanceRocky2.getTauxRemplissage() + " %");
+
+        log.info(seanceRocky2.demarrer());
+        log.info(seanceRocky2.terminer());
+        log.info("État de la salle " + salle2.getNumero() + " : " + salle2.getEtat());
+
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }

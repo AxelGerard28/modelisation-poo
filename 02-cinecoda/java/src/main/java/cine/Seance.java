@@ -44,4 +44,8 @@ public class Seance {
         }
         return "Séance démarrée";
     }
+
+    public String terminer() {
+        return"";
+    }
 }
