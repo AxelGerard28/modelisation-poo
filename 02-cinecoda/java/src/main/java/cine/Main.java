@@ -24,7 +24,7 @@ public class Main {
         }
         log.info(textSallesLibres);
 
-
+        log.info("");
         log.info("=== 2. Films et supports ===");
 
         Film dune = new Film("Dune 3", 166);
@@ -39,6 +39,24 @@ public class Main {
         log.info(supportDune.getFilm().getTitre() + " (" + supportDune.getFilm().getDureeEnMinutes() + " min) : " + supportDune.getDescription());
         log.info(supportAvengers.getFilm().getTitre() + " (" + supportAvengers.getFilm().getDureeEnMinutes() + " min) : " + supportAvengers.getDescription());
         log.info(supportRocky.getFilm().getTitre() + " (" + supportRocky.getFilm().getDureeEnMinutes() + " min) : " +supportRocky.getDescription());
+
+
+        log.info("");
+        log.info("=== 3. Dune 3 en Salle 1 le 15/10/2026 (tarif de base 10,00 €) ===");
+
+        Salle salle1 = cinema.getSalles().get(0);
+
+        Seance seanceDune = new Seance(supportDune, salle1, "15/10/2026", 10.00);
+
+        log.info(seanceDune.vendreBillet(new BilletPleinTarif()));
+        log.info(seanceDune.vendreBillet(new BilletPleinTarif()));
+        log.info(seanceDune.vendreBillet(new BilletEtudiant()));
+        log.info(seanceDune.vendreBillet(new BilletEnfant()));
+
+        log.info("Places restantes : " + seanceDune.getPlaceRestantes());
+        log.info("Taux de remplissage : " + seanceDune.getTauxRemplissage() + " %");
+        log.info("Recette : " + seanceDune.getRecetteFormatee());
+
 
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
