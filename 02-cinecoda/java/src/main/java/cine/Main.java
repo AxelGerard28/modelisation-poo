@@ -75,7 +75,7 @@ public class Main {
 
         log.info(seanceRocky1.demarrer());
 
-        log.info("État de la salle " + salle1.getNumero() + " : " + salle1.getEtat());
+        log.info("État de la Salle " + salle1.getNumero() + " : " + salle1.getEtat());
 
         log.info("");
         log.info("=== 6. I Play Rocky en Salle 2 le 15/10/2026 (tarif de base 8,00 €) ===");
@@ -93,7 +93,7 @@ public class Main {
 
         log.info(seanceRocky2.demarrer());
         log.info(seanceRocky2.terminer());
-        log.info("État de la salle " + salle2.getNumero() + " : " + salle2.getEtat());
+        log.info("État de la Salle " + salle2.getNumero() + " : " + salle2.getEtat());
 
         String textSallesLibres2 = "Salles libres : ";
 
