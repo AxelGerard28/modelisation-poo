@@ -22,6 +22,9 @@ public class Main {
         for (Salle salle : cinema.getSalles()) {
             textSallesLibres += "Salle " + salle.getNumero() + ", ";
         }
+        if (textSallesLibres.endsWith(", ")) {
+            textSallesLibres = textSallesLibres.substring(0, textSallesLibres.length() - 2);
+        }
         log.info(textSallesLibres);
 
         log.info("");
@@ -92,15 +95,19 @@ public class Main {
         log.info(seanceRocky2.terminer());
         log.info("État de la salle " + salle2.getNumero() + " : " + salle2.getEtat());
 
-        String texteSallesLibres2 = "Salles libres : ";
+        String textSallesLibres2 = "Salles libres : ";
 
         for (Salle s : cinema.getSalles()) {
             if (s.getEtat() == EtatSalle.LIBRE) {
-                texteSallesLibres2 += "Salle " + s.getNumero() + ", ";
+                textSallesLibres2 += "Salle " + s.getNumero() + ", ";
             }
         }
+        if (textSallesLibres2.endsWith(", ")) {
+            textSallesLibres2 = textSallesLibres2.substring(0, textSallesLibres2.length() - 2);
+        }
 
-        log.info(texteSallesLibres2);
+
+        log.info(textSallesLibres2);
         log.info("Projections de la copie de « " + supportRocky.getFilm().getTitre() + " » : " + ((Copie35mm) supportRocky).getNombreProjections());
 
 
