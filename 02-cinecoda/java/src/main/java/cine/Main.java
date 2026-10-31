@@ -122,7 +122,18 @@ public class Main {
         }
         // Possibilité de réutiliser au début, je pense, à voir si j'ai le temps de refacto.
 
+        log.info("");
+        log.info("=== 9. Bilan du 15/10/2026 ===");
 
+        Seance[] seanceDuJour = {seanceAvengers, seanceRocky1, seanceRocky2, seanceDune};
+        double recetteTotal =0.0;
+
+        for (Seance seance : seanceDuJour) {
+            log.info(seance.getBilan());
+            recetteTotal += seance.getRecette();
+        }
+
+        log.info("Recette du jour : " + String.format(java.util.Locale.FRANCE, "%.2f €", recetteTotal));
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }

@@ -58,4 +58,13 @@ public class Seance {
         salle.setEtat(EtatSalle.NETTOYAGE);
         return "Séance terminée";
     }
+
+    public double getRecette() {
+        return recette;
+    }
+
+    public String getBilan() {
+        return support.getFilm().getTitre() + ", Salle " + salle.getNumero() +
+                " : " + placesVendues + " billet(s), recette " + getRecetteFormatee();
+    }
 }
