@@ -110,6 +110,19 @@ public class Main {
         log.info(salle2.nettoyer());
         log.info(seanceRocky2.demarrer());
 
+        log.info("");
+        log.info("=== 8. Programmation en Salle 3 ===");
+
+        int numeroRecherche = 3;
+        Salle salle3 = cinema.getSalleParNumero(numeroRecherche);
+        if (salle3 == null) {
+            log.info("Programmation refusée : le cinéma CinéCoda n'a pas de salle " + numeroRecherche);
+        } else {
+            log.info( "salle : " + salle3.getNumero());
+        }
+        // Possibilité de réutiliser au début, je pense, à voir si j'ai le temps de refacto.
+
+
 
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }

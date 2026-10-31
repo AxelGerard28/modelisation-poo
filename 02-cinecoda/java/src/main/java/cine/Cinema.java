@@ -17,4 +17,13 @@ public class Cinema {
     public List<Salle> getSalles() {
         return salles;
     }
+
+    public Salle getSalleParNumero(int numero) {
+        for(Salle salle : salles) {
+            if (salle.getNumero() == numero) {
+                return salle;
+            }
+        }
+        return null;
+    }
 }
