@@ -144,6 +144,7 @@ public class Main {
 
         log.info("Recette du jour : " + String.format(java.util.Locale.FRANCE, "%.2f €", recetteTotal));
 
+        //le push ne marche pas...
         // Rejouez ici le scénario de l'énoncé, en affichant chaque étape avec log.info(...)
     }
 }
